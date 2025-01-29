@@ -12,7 +12,7 @@ user_input = st.text_input("質問を入力してください")
 if st.button("送信"):
     # OpenAI APIへリクエスト（最新の書き方）
     response = openai.ChatCompletion.create(
-        model="ft:gpt-4o-mini:your-org:custom:id",
+        model="ft:gpt-4o-mini-2024-07-18:teammq::Av2dkXSy",
         messages=[{"role": "user", "content": user_input}]
     )
 
