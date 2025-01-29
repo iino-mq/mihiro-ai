@@ -1,7 +1,10 @@
+import openai
 import streamlit as st
-from openai import OpenAI
 
-client = OpenAI()
+openai.api_key = st.secrets["OPENAI_API_KEY"]
+
+client = openai.Client(api_key=openai.api_key)
+
 
 st.title("カスタムAIチャットボット")
 
