@@ -10,7 +10,7 @@ st.title("カスタムAIチャットボット")
 user_input = st.text_input("質問を入力してください")
 
 if st.button("送信"):
-    # OpenAI APIへリクエスト
+    # OpenAI APIへリクエスト（最新の書き方）
     response = openai.ChatCompletion.create(
         model="ft:gpt-4o-mini:your-org:custom:id",
         messages=[{"role": "user", "content": user_input}]
