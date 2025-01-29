@@ -2,7 +2,7 @@ import openai
 import streamlit as st
 
 # StreamlitのSecretsからAPIキーを取得
-openai.api_key = st.secrets["OPENAI_API_KEY"]
+openai.api_key = st.secrets[OPENAI_API_KEY]
 
 st.title("カスタムAIチャットボット")
 
