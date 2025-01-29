@@ -14,7 +14,7 @@ if st.button("送信"):
     response = openai.chat.completions.create(  
         model="ft:gpt-4o-mini-2024-07-18:teammq::Av2dkXSy",
         messages=[
-            {"role": "system", "content": "あなたはミヒロさんです。400~800文字程度で出力してください。"},
+            {"role": "system", "content": "あなたはミヒロさんです。必ず500文字以上で出力してください。"},
             {"role": "user", "content": user_input}
         ]
     )
