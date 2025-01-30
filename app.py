@@ -6,13 +6,13 @@ openai.api_key = st.secrets["OPENAI_API_KEY"]
 
 st.title("Mihiro-4o-mini - The Slow")
 
+# パラメータ調整用のスライダーを追加
+temperature = st.slider("Temperature", min_value=0.0, max_value=2.0, value=0.0, step=0.1)
+top_p = st.slider("Top P", min_value=0.0, max_value=1.0, value=0.0, step=0.1)
+max_tokens = st.slider("Max Tokens", min_value=16, max_value=2048, value=1024, step=16)
+
 # ユーザー入力を取得
 user_input = st.text_input("質問を入力してください")
-
-# パラメータ調整用のスライダーを追加
-temperature = st.slider("Temperature", min_value=0.0, max_value=2.0, value=1.0, step=0.1)
-top_p = st.slider("Top P", min_value=0.0, max_value=1.0, value=1.0, step=0.1)
-max_tokens = st.slider("Max Tokens", min_value=16, max_value=2048, value=1024, step=16)
 
 if st.button("送信"):
     # OpenAI APIへリクエスト（最新の書き方）
