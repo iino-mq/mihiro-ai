@@ -4,7 +4,7 @@ import streamlit as st
 # StreamlitのSecretsからAPIキーを取得
 openai.api_key = st.secrets["OPENAI_API_KEY"]  
 
-st.title("Mihiro - The Slow")
+st.title("Mihiro-4o-mini - The Slow")
 
 # ユーザー入力を取得
 user_input = st.text_input("質問を入力してください")
